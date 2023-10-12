@@ -1,67 +1,29 @@
-## Fitur apa saja yang tersedia di Sistem Informasi Akademik Kampus?
+# Sistem
+project Sistem sistem berita acara dosen
 
-- Multi User
-- CRUD : Dosen, Mahasiswa, Fakultas, Gedung, Kelas, Matkul, Prodi, Ruangan, Jadwal, dan Tahun Akademik
-- otomatis pengisian data user berdasarkan data mahasiswa dan dosen
-- Pengelompokan kelas mahasiswa
-- KRS mahasiswa
-- Jadwal Dosen
-- Nilai
-- KHS Mahasiswa
+## Sistem sistem berita acara dosen
 
-## Release Date
 
-19 Mar 2021
+### Installation
+1. Clone the repository using the command "git clone [link]"
+2. Create database in MySql
+3. Configure the .env file accordingly
+4. Run command 
 
-## Default Account for testing
-
-Admin Default Account
-username:erwin@gmail.com
-password:11111111
-
-Mahasiswa Default Account
-username:16220320
-password:11111111
-
-Dosen Default Account
-username:1102110
-password:11111111
-
-## How to Install
-
-1. **Clone Repository**
-
-```bash
-git clone https://github.com/erwin-perdana/sistem-informasi-akademik-kampus-laravel.git
-go to folder
-composer install
-npm install
-cp .env.example .env
+```
+$composer install
+$php artisan migrate
+$php artisan db:seed
+$php artisan serve
+$php artisan storage:link
+```
+### Mendapat Update kodingan terbaru
+```
+$ git fetch origin master
+$ git pull origin master
 ```
 
-2. **Buka `.env` lalu ubah baris berikut sesuai dengan databasemu yang ingin dipakai**
+## Progres 13/10/2023
+* pematangan sistem berita acara dosen
 
-```bash
-DB_PORT=3306
-DB_DATABASE=siakd
-DB_USERNAME=root
-DB_PASSWORD=
-```
 
-3. **Instalasi website**
-
-```bash
-php artisan key:generate
-php artisan migrate --seed
-```
-
-4. **Jalankan website**
-
-```bash
-php artisan serve
-```
-
-## Author
-
-- E-mail : winp2807@gmail.com
-- LinkedIn : <a href="https://www.linkedin.com/in/erwin-perdana-81580b201"> Erwin Perdana</a>
