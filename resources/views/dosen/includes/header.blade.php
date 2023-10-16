@@ -14,5 +14,5 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet"> 
-    <title>Sistem Informasi Akademik</title>
+    <title>Sistem Berita Acara Dosen</title>
   </head>

@@ -5,7 +5,7 @@
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          SI Akademik
+          Sistem Berita Acara Dosen
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
@@ -16,19 +16,53 @@
             </a>
           </li>
           <li class="nav-item ">
+            <a class="nav-link" href="{{ route('dosen.index') }}">
+              <i class="material-icons">person</i>
+              <p>Dosen</p>
+            </a>
+          </li>
+          {{-- <li class="nav-item ">
             <a class="nav-link" href="{{ route('mahasiswa.index') }}">
               <i class="material-icons">person</i>
               <p>Mahasiswa</p>
             </a>
-          </li>
-          <li class="nav-item ">
-          <li class="nav-item ">
+          </li> --}}
+          {{-- <li class="nav-item "> --}}
+          {{-- <li class="nav-item ">
             <a class="nav-link" href="{{ route('schedule.index') }}">
               <i class="material-icons">library_books</i>
               <p>Jadwal</p>
             </a>
+          </li> --}}
+
+           <li class="nav-item ">
+            <a class="nav-link" href="{{ route('schedule.index') }}">
+              <i class="material-icons">library_books</i>
+              <p>Berita Acara</p>
+            </a>
           </li>
-          <li class="nav-item dropdown">
+
+          <li class="nav-item ">
+            <a class="nav-link" href="{{ route('schedule.index') }}">
+              <i class="material-icons">library_books</i>
+              <p>BA Formal dan Non Formal</p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="{{ route('schedule.index') }}">
+              <i class="material-icons">library_books</i>
+              <p>UTS / UAS</p>
+            </a>
+          </li>
+           <li class="nav-item ">
+            <a class="nav-link" href="{{ route('schedule.index') }}">
+              <i class="material-icons">library_books</i>
+              <p>KP / Skripsi</p>
+            </a>
+          </li>
+
+          {{-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Master Data
             </a>
@@ -42,7 +76,8 @@
               <a class="dropdown-item" href="{{ route('ruangan.index') }}">Ruangan</a>
               <a class="dropdown-item" href="{{ route('ta.index') }}">Tahun Akademik</a>
             </div>
-          </li>
+          </li> --}}
+
         </ul>
       </div>
     </div>

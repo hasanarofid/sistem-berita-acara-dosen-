@@ -5,13 +5,13 @@
     <div class="container">
       <div class="row d-flex"> 
         <div class="col-md-7 text-white text-center align-self-center">
-          <p class="mb-4">Sistem Informasi Akademik</p>
+          <p class="mb-4">Sistem Berita Acara Dosen</p>
           <hr>
           <p>UNIVERSITAS PERDANA</p>
         </div>
         <div class="col-md-5">
           <div class="login">
-            <h3 class="text-center">Login SIAKD</h3>
+            <h3 class="text-center">Login SBAD</h3>
             @if (session('status'))
                 <div class="alert alert-danger">
                     {{ session('status') }}
