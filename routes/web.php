@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::middleware('auth:Administrator')->group(function () {
+     // berita-acara
+    Route::prefix('berita-acara')->group(function () {
+        Route::get('/berita-acara', 'BeritaAcaraController@index')->name('berita-acara');
+        // Add routes specific to 'berita-acara' here
+    });
     Route::resource('mahasiswa', 'MahasiswaController');
     Route::resource('dosen', 'DosenController');
     Route::resource('matkul', 'MatkulController');
@@ -33,6 +38,12 @@ Route::middleware('auth:Administrator')->group(function () {
     Route::post('/deleteMahasiswa/{id}', 'KelasController@deleteMahasiswa');
 
     Route::get('/', 'HomeController@dashboard')->name('dashboard');
+
+   
+
+
+
+
 });
 
 Route::middleware('auth:mahasiswa')->group(function () {

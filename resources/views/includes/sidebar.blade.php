@@ -36,7 +36,7 @@
           </li> --}}
 
            <li class="nav-item ">
-            <a class="nav-link" href="{{ route('schedule.index') }}">
+            <a class="nav-link" href="{{ route('berita-acara') }}">
               <i class="material-icons">library_books</i>
               <p>Berita Acara</p>
             </a>
@@ -62,11 +62,11 @@
             </a>
           </li>
 
-          {{-- <li class="nav-item dropdown">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Master Data
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black">
               <a class="dropdown-item" href="{{ route('dosen.index') }}">Dosen</a>
               <a class="dropdown-item" href="{{ route('fakultas.index') }}">Fakultas</a>
               <a class="dropdown-item" href="{{ route('gedung.index') }}">Gedung</a>
@@ -76,7 +76,7 @@
               <a class="dropdown-item" href="{{ route('ruangan.index') }}">Ruangan</a>
               <a class="dropdown-item" href="{{ route('ta.index') }}">Tahun Akademik</a>
             </div>
-          </li> --}}
+          </li>
 
         </ul>
       </div>

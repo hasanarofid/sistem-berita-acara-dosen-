@@ -50,8 +50,12 @@
                         <img src="{{ asset('assets-real/img/logo.png') }}" alt="" width="150" height="150">
                     </div>
                     <div class="col-md-8 text-center align-self-center">
-                        <h4>Universitas Perdana Sumatera Utara</h4>
-                        <small>Jl. Di. Panjaitan No.10 Kota Tanjungbalai, Telp: 0623-41079, Fax: 0623-42366</small>
+                        <h4>STMIK BANDUNG</h4>
+                        <small>Jl. Cikutra No.113, Bandung
+Kota Bandung, Jawa Barat 40124
+Telp : +022-7207777
+E-mail : info@stmik-bandung.ac.id
+</small>
                     </div>
                     <div class="col-md-1">
                     </div>

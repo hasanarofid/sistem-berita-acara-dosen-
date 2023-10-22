@@ -7,7 +7,7 @@
         <div class="col-md-7 text-white text-center align-self-center">
           <p class="mb-4">Sistem Berita Acara Dosen</p>
           <hr>
-          <p>UNIVERSITAS PERDANA</p>
+          <p>STMIK BANDUNG</p>
         </div>
         <div class="col-md-5">
           <div class="login">
