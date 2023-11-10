@@ -36,7 +36,7 @@
           </li> --}}
 
            <li class="nav-item ">
-            <a class="nav-link" href="{{ route('berita-acara') }}">
+            <a class="nav-link" href="{{ route('berita-acara.index') }}">
               <i class="material-icons">library_books</i>
               <p>Berita Acara</p>
             </a>
@@ -68,8 +68,8 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black">
               <a class="dropdown-item" href="{{ route('dosen.index') }}">Dosen</a>
-              <a class="dropdown-item" href="{{ route('fakultas.index') }}">Fakultas</a>
-              <a class="dropdown-item" href="{{ route('gedung.index') }}">Gedung</a>
+              {{-- <a class="dropdown-item" href="{{ route('fakultas.index') }}">Fakultas</a>
+              <a class="dropdown-item" href="{{ route('gedung.index') }}">Gedung</a> --}}
               <a class="dropdown-item" href="{{ route('kelas.index') }}">Kelas</a>
               <a class="dropdown-item" href="{{ route('matkul.index') }}">Matakuliah</a>
               <a class="dropdown-item" href="{{ route('prodi.index') }}">Program Studi</a>

@@ -2,11 +2,24 @@
 
 @section('content')    
     <div class="container-fluid">
+      <div class="row">
+        <div class="col-8">
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
+        </div>
+        <div class="col-4">
+        <a type="submit" href="{{ route('berita-acara.create') }}" class="btn btn-primary pull-right">Tambah</a>
+        <div class="clearfix"></div>
+        </div>
+    </div>
           <div class="row">
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title ">Jadwal Kuliah Tahun Akademik: {{$ta->tahun_akademik}} /{{$ta->semester}}</h4>
+                  <h4 class="card-title ">Berita Acara </h4>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
@@ -32,7 +45,7 @@
                         </th>
                       </thead>
                       <tbody>
-                      @forelse ($items as $index => $item)
+                      @forelse ($model as $index => $item)
                         <tr>
                           <td>
                           {{ $index+1 }}

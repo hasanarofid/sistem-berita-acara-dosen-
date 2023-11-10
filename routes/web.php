@@ -14,10 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 Route::middleware('auth:Administrator')->group(function () {
      // berita-acara
-    Route::prefix('berita-acara')->group(function () {
-        Route::get('/berita-acara', 'BeritaAcaraController@index')->name('berita-acara');
-        // Add routes specific to 'berita-acara' here
+     Route::prefix('berita-acara')->group(function () {
+        Route::get('/index', 'BeritaAcaraController@index')->name('berita-acara.index');
+        Route::get('/create', 'BeritaAcaraController@create')->name('berita-acara.create');
+        Route::post('/store', 'BeritaAcaraController@store')->name('berita-acara.store');
+
     });
+    
+
+
+
     Route::resource('mahasiswa', 'MahasiswaController');
     Route::resource('dosen', 'DosenController');
     Route::resource('matkul', 'MatkulController');
