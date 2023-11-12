@@ -11,7 +11,7 @@
         @endif
         </div>
         <div class="col-4">
-        <a type="submit" href="{{ route('berita-acara.create') }}" class="btn btn-primary pull-right">Tambah</a>
+        <a type="submit" href="{{ route('berita-acara-uas-uts.create') }}" class="btn btn-primary pull-right">Tambah</a>
         <div class="clearfix"></div>
         </div>
     </div>
@@ -19,7 +19,7 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title ">Berita Acara </h4>
+                  <h4 class="card-title ">Berita Acara Uas dan UTS </h4>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">

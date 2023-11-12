@@ -17,7 +17,55 @@ Route::middleware('auth:Administrator')->group(function () {
      Route::prefix('berita-acara')->group(function () {
         Route::get('/index', 'BeritaAcaraController@index')->name('berita-acara.index');
         Route::get('/create', 'BeritaAcaraController@create')->name('berita-acara.create');
+        Route::get('/detail/{id}', 'BeritaAcaraController@detail')->name('berita-acara.detail');
+        Route::get('/create-detail/{id}', 'BeritaAcaraController@createDetail')->name('berita-acara.create-detail');
+        Route::get('/editdetail/{id}', 'BeritaAcaraController@editdetail')->name('berita-acara.editdetail');
         Route::post('/store', 'BeritaAcaraController@store')->name('berita-acara.store');
+        Route::post('/store-detail/{id}', 'BeritaAcaraController@storeDetail')->name('berita-acara.store-detail');
+        Route::post('/update-detail/{id}', 'BeritaAcaraController@updateDetail')->name('berita-acara.update-detail');
+        Route::delete('/destroy/{id}', 'BeritaAcaraController@hapusDetail')->name('berita-acara.destroy');
+
+    });
+
+      // berita-acara formal dan non formal
+      Route::prefix('berita-acara-formal-non')->group(function () {
+        Route::get('/index', 'BeritaAcaraFormalNonController@index')->name('berita-acara-formal-non.index');
+        Route::get('/create', 'BeritaAcaraFormalNonController@create')->name('berita-acara-formal-non.create');
+        Route::get('/detail/{id}', 'BeritaAcaraFormalNonController@detail')->name('berita-acara-formal-non.detail');
+        Route::get('/create-detail/{id}', 'BeritaAcaraFormalNonController@createDetail')->name('berita-acara-formal-non.create-detail');
+        Route::get('/editdetail/{id}', 'BeritaAcaraFormalNonController@editdetail')->name('berita-acara-formal-non.editdetail');
+        Route::post('/store', 'BeritaAcaraFormalNonController@store')->name('berita-acara-formal-non.store');
+        Route::post('/store-detail/{id}', 'BeritaAcaraFormalNonController@storeDetail')->name('berita-acara-formal-non.store-detail');
+        Route::post('/update-detail/{id}', 'BeritaAcaraFormalNonController@updateDetail')->name('berita-acara-formal-non.update-detail');
+        Route::delete('/destroy/{id}', 'BeritaAcaraFormalNonController@hapusDetail')->name('berita-acara-formal-non.destroy');
+
+    });
+
+     // berita-acara uas dan uts
+     Route::prefix('berita-acara-uts-uas')->group(function () {
+        Route::get('/index', 'BeritaAcaraUasUtsController@index')->name('berita-acara-uts-uas.index');
+        Route::get('/create', 'BeritaAcaraUasUtsController@create')->name('berita-acara-uts-uas.create');
+        Route::get('/detail/{id}', 'BeritaAcaraUasUtsController@detail')->name('berita-acara-uts-uas.detail');
+        Route::get('/create-detail/{id}', 'BeritaAcaraUasUtsController@createDetail')->name('berita-acara-uts-uas.create-detail');
+        Route::get('/editdetail/{id}', 'BeritaAcaraUasUtsController@editdetail')->name('berita-acara-uts-uas.editdetail');
+        Route::post('/store', 'BeritaAcaraUasUtsController@store')->name('berita-acara-uts-uas.store');
+        Route::post('/store-detail/{id}', 'BeritaAcaraUasUtsController@storeDetail')->name('berita-acara-uts-uas.store-detail');
+        Route::post('/update-detail/{id}', 'BeritaAcaraUasUtsController@updateDetail')->name('berita-acara-uts-uas.update-detail');
+        Route::delete('/destroy/{id}', 'BeritaAcaraUasUtsController@hapusDetail')->name('berita-acara-uts-uas.destroy');
+
+    });
+
+     // berita-acara skripsi dan kp
+     Route::prefix('berita-acara-kp-skripsi')->group(function () {
+        Route::get('/index', 'BeritaAcaraKpSkirpsiController@index')->name('berita-acara-kp-skripsi.index');
+        Route::get('/create', 'BeritaAcaraKpSkirpsiController@create')->name('berita-acara-kp-skripsi.create');
+        Route::get('/detail/{id}', 'BeritaAcaraKpSkirpsiController@detail')->name('berita-acara-kp-skripsi.detail');
+        Route::get('/create-detail/{id}', 'BeritaAcaraKpSkirpsiController@createDetail')->name('berita-acara-kp-skripsi.create-detail');
+        Route::get('/editdetail/{id}', 'BeritaAcaraKpSkirpsiController@editdetail')->name('berita-acara-kp-skripsi.editdetail');
+        Route::post('/store', 'BeritaAcaraKpSkirpsiController@store')->name('berita-acara-kp-skripsi.store');
+        Route::post('/store-detail/{id}', 'BeritaAcaraKpSkirpsiController@storeDetail')->name('berita-acara-kp-skripsi.store-detail');
+        Route::post('/update-detail/{id}', 'BeritaAcaraKpSkirpsiController@updateDetail')->name('berita-acara-kp-skripsi.update-detail');
+        Route::delete('/destroy/{id}', 'BeritaAcaraKpSkirpsiController@hapusDetail')->name('berita-acara-kp-skripsi.destroy');
 
     });
     

@@ -15,25 +15,7 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="{{ route('dosen.index') }}">
-              <i class="material-icons">person</i>
-              <p>Dosen</p>
-            </a>
-          </li>
-          {{-- <li class="nav-item ">
-            <a class="nav-link" href="{{ route('mahasiswa.index') }}">
-              <i class="material-icons">person</i>
-              <p>Mahasiswa</p>
-            </a>
-          </li> --}}
-          {{-- <li class="nav-item "> --}}
-          {{-- <li class="nav-item ">
-            <a class="nav-link" href="{{ route('schedule.index') }}">
-              <i class="material-icons">library_books</i>
-              <p>Jadwal</p>
-            </a>
-          </li> --}}
+  
 
            <li class="nav-item ">
             <a class="nav-link" href="{{ route('berita-acara.index') }}">
@@ -43,20 +25,20 @@
           </li>
 
           <li class="nav-item ">
-            <a class="nav-link" href="{{ route('schedule.index') }}">
+            <a class="nav-link" href="{{ route('berita-acara-formal-non.index') }}">
               <i class="material-icons">library_books</i>
               <p>BA Formal dan Non Formal</p>
             </a>
           </li>
 
           <li class="nav-item ">
-            <a class="nav-link" href="{{ route('schedule.index') }}">
+            <a class="nav-link" href="{{ route('berita-acara-uts-uas.index') }}">
               <i class="material-icons">library_books</i>
               <p>UTS / UAS</p>
             </a>
           </li>
            <li class="nav-item ">
-            <a class="nav-link" href="{{ route('schedule.index') }}">
+            <a class="nav-link" href="{{ route('berita-acara-kp-skripsi.index') }}">
               <i class="material-icons">library_books</i>
               <p>KP / Skripsi</p>
             </a>
@@ -68,6 +50,8 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black">
               <a class="dropdown-item" href="{{ route('dosen.index') }}">Dosen</a>
+              <a class="dropdown-item" href="{{ route('mahasiswa.index') }}">Mahasiswa</a>
+
               {{-- <a class="dropdown-item" href="{{ route('fakultas.index') }}">Fakultas</a>
               <a class="dropdown-item" href="{{ route('gedung.index') }}">Gedung</a> --}}
               <a class="dropdown-item" href="{{ route('kelas.index') }}">Kelas</a>

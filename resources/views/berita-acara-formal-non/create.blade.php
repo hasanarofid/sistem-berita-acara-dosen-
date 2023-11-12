@@ -4,7 +4,7 @@
       <div class="container-fluid">
           <div class="row">
             <div class="col-12">
-              <a href="{{ route('berita-acara.index') }}" class="btn btn-success pull-left">
+              <a href="{{ route('berita-acara-formal-non.index') }}" class="btn btn-success pull-left">
                 <i class="fa fa-arrow-left"></i>
               </a>
             </div>
@@ -16,7 +16,7 @@
                   <h4 class="card-title">Tambah Berita Acara</h4>
                 </div>
                 <div class="card-body">
-                  <form action="{{ route('berita-acara.store') }}" method="POST" enctype="multipart/form-data">
+                  <form action="{{ route('berita-acara-formal-non.store') }}" method="POST" enctype="multipart/form-data">
                   @csrf
                     <div class="row">
                       <div class="col-md-12">
