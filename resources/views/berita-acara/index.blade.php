@@ -29,16 +29,16 @@
                           No
                         </th>
                         <th>
-                          Fakultas
+                          Kegiatan
                         </th>
                         <th>
-                          Kode Program Studi
+                          Hari
                         </th>
                         <th>
-                          Program Studi
+                          Ruangan
                         </th>
                         <th>
-                         Jenjang
+                         Dosen
                         </th>
                         <th>
                           Action
@@ -46,21 +46,22 @@
                       </thead>
                       <tbody>
                       @forelse ($model as $index => $item)
+                   
                         <tr>
                           <td>
                           {{ $index+1 }}
                           </td>
                           <td>
-                          {{ $item->fakultas['fakultas'] }}
+                          {{ $item->kegiatan }}
                           </td>
                           <td>
-                          {{ $item->kode_prodi }}
+                          {{ $item->hari }}
                           </td>
                           <td>
-                          {{ $item->prodi }}
+                          {{ $item->ruangan->ruangan }}
                           </td>
                           <td>
-                          {{ $item->jenjang }}
+                          {{ $item->dosen->nidn.' - '.$item->dosen->nama }}
                           </td>
                           <td>
                             <a href="{{ route('schedule.show', $item->id) }}" class="btn btn-success btn-sm">

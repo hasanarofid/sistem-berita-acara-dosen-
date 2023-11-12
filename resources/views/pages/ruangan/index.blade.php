@@ -28,9 +28,7 @@
                         <th>
                           ID
                         </th>
-                        <th>
-                          Gedung
-                        </th>
+                        
                         <th>
                           Ruangan
                         </th>
@@ -43,9 +41,6 @@
                         <tr>
                           <td>
                           {{ $item->id }}
-                          </td>
-                          <td>
-                          {{ $item->gedung['gedung'] }}
                           </td>
                           <td>
                           {{ $item->ruangan }}

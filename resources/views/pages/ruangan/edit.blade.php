@@ -18,9 +18,10 @@
                 <div class="card-body">
                   <form action="{{ route('ruangan.update', $item->id) }}" method="POST">
                   @method('PUT')
+                  <input type="hidden" name="id_gedung" value="1" >
                   @csrf
                     <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-md-12">
                         <div class="form-group">
                           <label class="bmd-label-floating">Ruangan</label>
                           <input type="text" class="form-control" name="ruangan" value="{{ old('ruangan') ? old('ruangan') : $item->ruangan }}" 
@@ -28,21 +29,7 @@
                             @error('ruangan') <div class="text-muted">{{ $message }}</div> @enderror
                         </div>
                       </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1">Gedung</label>
-                            <select class="form-control @error('id_gedung') is-invalid @enderror" id="exampleFormControlSelect1" name="id_gedung">
-                              @foreach ($gedungs as $gedung)
-                                @if ($item->id_gedung == $gedung->id)
-                                  <option value="{{ $gedung->id }}" selected>{{ $gedung->gedung }}</option>
-                                @else
-                                  <option value="{{ $gedung->id }}">{{ $gedung->gedung }}</option>
-                                @endif
-                              @endforeach
-                            </select>
-                            @error('id_gedung') <div class="text-muted">{{ $message }}</div> @enderror
-                        </div>
-                      </div>
+                     
                     </div>
                     <button type="submit" class="btn btn-primary pull-right">Edit</button>
                     <div class="clearfix"></div>
