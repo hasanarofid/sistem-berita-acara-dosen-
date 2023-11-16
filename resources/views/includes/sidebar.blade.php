@@ -56,7 +56,7 @@
               <a class="dropdown-item" href="{{ route('gedung.index') }}">Gedung</a> --}}
               <a class="dropdown-item" href="{{ route('kelas.index') }}">Kelas</a>
               <a class="dropdown-item" href="{{ route('matkul.index') }}">Matakuliah</a>
-              <a class="dropdown-item" href="{{ route('prodi.index') }}">Program Studi</a>
+              {{-- <a class="dropdown-item" href="{{ route('prodi.index') }}">Program Studi</a> --}}
               <a class="dropdown-item" href="{{ route('ruangan.index') }}">Ruangan</a>
               <a class="dropdown-item" href="{{ route('ta.index') }}">Tahun Akademik</a>
             </div>
