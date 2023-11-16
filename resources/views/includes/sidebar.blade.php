@@ -24,12 +24,12 @@
             </a>
           </li>
 
-          <li class="nav-item ">
+          {{-- <li class="nav-item ">
             <a class="nav-link" href="{{ route('berita-acara-formal-non.index') }}">
               <i class="material-icons">library_books</i>
               <p>BA Formal dan Non Formal</p>
             </a>
-          </li>
+          </li> --}}
 
           <li class="nav-item ">
             <a class="nav-link" href="{{ route('berita-acara-uts-uas.index') }}">
@@ -50,9 +50,9 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black">
               <a class="dropdown-item" href="{{ route('dosen.index') }}">Dosen</a>
-              <a class="dropdown-item" href="{{ route('mahasiswa.index') }}">Mahasiswa</a>
-
-              {{-- <a class="dropdown-item" href="{{ route('fakultas.index') }}">Fakultas</a>
+              {{-- <a class="dropdown-item" href="{{ route('mahasiswa.index') }}">Mahasiswa</a> --}}
+              <a class="dropdown-item" href="{{ route('fakultas.index') }}">Jurusan</a>
+              {{-- 
               <a class="dropdown-item" href="{{ route('gedung.index') }}">Gedung</a> --}}
               <a class="dropdown-item" href="{{ route('kelas.index') }}">Kelas</a>
               <a class="dropdown-item" href="{{ route('matkul.index') }}">Matakuliah</a>

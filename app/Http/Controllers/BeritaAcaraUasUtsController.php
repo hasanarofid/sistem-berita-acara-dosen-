@@ -46,7 +46,7 @@ public function store(Request $request){
     $model->deleted_at = null;
     $model->save();
 
-    return redirect()->route('berita-acara-uas-uts.index')->with('status', 'Data berhasil ditambahkan!');
+    return redirect()->route('berita-acara-uts-uas.index')->with('status', 'Data berhasil ditambahkan!');
 }
 
 //update detail
@@ -57,7 +57,7 @@ public function updateDetail($id,Request $request){
     $modelDetail->waktu = $request->waktu;
     $modelDetail->tgl_kedatangan = $request->hari;
     $modelDetail->save();
-    return redirect()->route('berita-acara-uas-uts.detail',['id'=>$modelDetail->id_berita_acara])->with('status', 'Data berhasil diupdate!');
+    return redirect()->route('berita-acara-uts-uas.detail',['id'=>$modelDetail->id_berita_acara])->with('status', 'Data berhasil diupdate!');
 
 }
 
@@ -98,7 +98,7 @@ public function storeDetail($id,Request $request){
     $modelDetail->waktu = $request->waktu;
     $modelDetail->tgl_kedatangan = $request->hari;
     $modelDetail->save();
-    return redirect()->route('berita-acara-uas-uts.detail',['id'=>$id])->with('status', 'Data berhasil ditambahkan!');
+    return redirect()->route('berita-acara-uts-uas.detail',['id'=>$id])->with('status', 'Data berhasil ditambahkan!');
 
 }
 
