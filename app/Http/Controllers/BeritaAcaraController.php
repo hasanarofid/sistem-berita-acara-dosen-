@@ -12,7 +12,7 @@ use App\Models\Mahasiswa;
 
 use Carbon\Carbon;
 use App\Models\BeritaAcaraDetail;
-
+use Illuminate\Support\Facades\Auth;
 
 class BeritaAcaraController extends Controller
 {
@@ -120,6 +120,24 @@ if ($result) {
     // Deletion failed
 }
     
+    }
+
+    public function listDosen(){
+        $dosen = Dosen::where('nidn',Auth::user()->username)->first();
+        // dd($dosen);
+        $model = BeritaAcara::where('id_dosen',$dosen->id)->get();
+        // dd($model);
+        return view('dosen.beritaacara.index',compact('model'));
+    }
+
+    public function showBa($id){
+        // dd($id);
+        $dosen = Dosen::where('nidn',Auth::user()->username)->first();
+        // dd($dosen);
+        $model = BeritaAcara::find($id)->first();
+        $detail =  BeritaAcaraDetail::withoutGlobalScope(\Illuminate\Database\Eloquent\SoftDeletingScope::class)
+        ->where('id', $id)->get();
+        return view('dosen.beritaacara.show',compact('model','detail'));
     }
 
 }

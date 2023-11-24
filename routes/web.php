@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:Administrator')->group(function () {
      // berita-acara
      Route::prefix('berita-acara')->group(function () {
+        // list-dosen
         Route::get('/index', 'BeritaAcaraController@index')->name('berita-acara.index');
         Route::get('/create', 'BeritaAcaraController@create')->name('berita-acara.create');
         Route::get('/detail/{id}', 'BeritaAcaraController@detail')->name('berita-acara.detail');
@@ -110,7 +111,8 @@ Route::middleware('auth:mahasiswa')->group(function () {
 
 Route::middleware('auth:dosen')->group(function () {
     Route::get('/dosens','HomeController@dosen');
-
+    Route::get('/list-dosen', 'BeritaAcaraController@listDosen')->name('berita-acara.list-dosen');
+    Route::get('/show-ba/{id}', 'BeritaAcaraController@showBa')->name('berita-acara.show-ba');
     Route::resource('nilai', 'NilaiController');
     Route::get('/list-nilai','NilaiController@list')->name('nilai.list');
     Route::get('nilai/{id}/cetak', 'NilaiController@cetakDosen')->name('nilai.cetakDosen');

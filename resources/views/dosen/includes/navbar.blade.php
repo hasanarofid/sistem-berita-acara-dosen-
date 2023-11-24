@@ -20,6 +20,15 @@
             <a class="dropdown-item" href="{{ route('nilai.list') }}">Nilai</a>
           </div>
         </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Berita Acara
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{{ route('berita-acara.list-dosen') }}">Daftar Berita Acara</a>
+          </div>
+        </li>
         <li class="nav-item active logout">
           <a class="nav-link" href="{{ route('logout') }}"
                 onclick="event.preventDefault();

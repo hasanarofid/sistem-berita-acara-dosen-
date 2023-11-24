@@ -13,7 +13,7 @@
             <div class="col-md-8">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Tambah Fakultas</h4>
+                  <h4 class="card-title">Tambah Jurusan</h4>
                 </div>
                 <div class="card-body">
                   <form action="{{ route('fakultas.store') }}" method="POST">
@@ -21,7 +21,7 @@
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Fakultas</label>
+                          <label class="bmd-label-floating">Jurusan</label>
                           <input type="text" class="form-control" name="fakultas" value="{{ old('fakultas') }}" 
                             class="form-control @error('fakultas') is-invalid @enderror">
                             @error('fakultas') <div class="text-muted">{{ $message }}</div> @enderror
