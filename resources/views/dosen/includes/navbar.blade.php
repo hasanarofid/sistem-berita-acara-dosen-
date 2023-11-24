@@ -11,7 +11,7 @@
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item dropdown">
+        {{-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Akademik
           </a>
@@ -19,7 +19,7 @@
             <a class="dropdown-item" href="{{ route('absen.list') }}">Absensi</a>
             <a class="dropdown-item" href="{{ route('nilai.list') }}">Nilai</a>
           </div>
-        </li>
+        </li> --}}
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
