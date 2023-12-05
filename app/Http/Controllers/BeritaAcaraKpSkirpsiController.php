@@ -17,7 +17,7 @@ class BeritaAcaraKpSkirpsiController extends Controller
    //index
    public function index(){
     $model = BeritaAcara::where('jenis_ba','Berita Acara KP Skirpsi')->get();
-    return view('berita-acara-kp-skirpsi.index',compact('model'));
+    return view('berita-acara-kp-skripsi.index',compact('model'));
 }
 
 //create
@@ -28,11 +28,12 @@ public function create(){
     $ruangan = Ruangan::all();
 
 
-    return view('berita-acara-kp-skirpsi.create',compact('fakultas','dosen','matkul','ruangan'));
+    return view('berita-acara-kp-skripsi.create',compact('fakultas','dosen','matkul','ruangan'));
 }
 
 //simpan
 public function store(Request $request){
+    // dd($request);
     $model = new BeritaAcara();
     $model->jenis_ba = 'Berita Acara KP Skirpsi';
     $model->kegiatan = $request->kegiatan;
@@ -47,7 +48,7 @@ public function store(Request $request){
     $model->deleted_at = null;
     $model->save();
 
-    return redirect()->route('berita-acara-kp-skirpsi.index')->with('status', 'Data berhasil ditambahkan!');
+    return redirect()->route('berita-acara-kp-skripsi.index')->with('status', 'Data berhasil ditambahkan!');
 }
 
 //update detail
@@ -58,7 +59,7 @@ public function updateDetail($id,Request $request){
     $modelDetail->waktu = $request->waktu;
     $modelDetail->tgl_kedatangan = $request->hari;
     $modelDetail->save();
-    return redirect()->route('berita-acara-kp-skirpsi.detail',['id'=>$modelDetail->id_berita_acara])->with('status', 'Data berhasil diupdate!');
+    return redirect()->route('berita-acara-kp-skripsi.detail',['id'=>$modelDetail->id_berita_acara])->with('status', 'Data berhasil diupdate!');
 
 }
 
@@ -69,7 +70,7 @@ public function detail($id){
     ->where('id_berita_acara', $model->id)
     ->get();
     // dd($items);
-    return view('berita-acara-kp-skirpsi.detail',compact('model','items'));
+    return view('berita-acara-kp-skripsi.detail',compact('model','items'));
 }
 
 //createDetail 
@@ -77,7 +78,7 @@ public function createDetail($id){
     $model = BeritaAcara::find($id);
     $items = BeritaAcaraDetail::where('id_berita_acara', $id)->get();
     $mahasiswa = Mahasiswa::get();
-    return view('berita-acara-kp-skirpsi.createDetail',compact('model','items','mahasiswa'));
+    return view('berita-acara-kp-skripsi.createDetail',compact('model','items','mahasiswa'));
 }
 
 // editdetail
@@ -87,7 +88,7 @@ public function editdetail($id){
     ->where('id', $id)->first();
     // dd($model);
     $mahasiswa = Mahasiswa::get();
-    return view('berita-acara-kp-skirpsi.editDetail',compact('model','mahasiswa'));
+    return view('berita-acara-kp-skripsi.editDetail',compact('model','mahasiswa'));
 }
 
 //storeDetail
@@ -99,7 +100,7 @@ public function storeDetail($id,Request $request){
     $modelDetail->waktu = $request->waktu;
     $modelDetail->tgl_kedatangan = $request->hari;
     $modelDetail->save();
-    return redirect()->route('berita-acara-kp-skirpsi.detail',['id'=>$id])->with('status', 'Data berhasil ditambahkan!');
+    return redirect()->route('berita-acara-kp-skripsi.detail',['id'=>$id])->with('status', 'Data berhasil ditambahkan!');
 
 }
 
