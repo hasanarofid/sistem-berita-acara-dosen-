@@ -33,6 +33,7 @@ class DosenController extends Controller
      */
     public function create()
     {
+
         $fakultas = Fakultas::all();
         return view('pages.dosen.create')->with([
             'fakultas' => $fakultas
@@ -47,6 +48,7 @@ class DosenController extends Controller
      */
     public function store(DosenRequest $request)
     {
+        // dd($request);
         $data = $request->all();
         
         $photoName = $data['photo']->getClientOriginalName() . '-' . time(). '.' . $data['photo']->extension();

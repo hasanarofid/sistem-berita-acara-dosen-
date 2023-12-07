@@ -24,12 +24,12 @@ class DosenRequest extends FormRequest
     public function rules()
     {
         return [
-            'nidn' => 'required|integer',
+            'nidn' => 'required',
             'nama' => 'required',
             'tempat_lahir' => 'required',
             'tanggal_lahir' => 'required',
             'alamat' => 'required',
-            'id_fakultas' => 'required|integer',
+            'id_fakultas' => 'required',
             'email' => 'email',
             'photo' => 'required|image',
             'password' => 'required|confirmed',

@@ -15,7 +15,7 @@ class CreateDosensTable extends Migration
     {
         Schema::create('dosens', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('nidn');
+            $table->string('nidn');
             $table->string('nama');
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
