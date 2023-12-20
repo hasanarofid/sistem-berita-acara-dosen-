@@ -15,6 +15,7 @@ class CreateTableBeritaAcara extends Migration
     {
         Schema::create('berita_acara', function (Blueprint $table) {
             $table->id();
+            $table->string('kegiatan');
             $table->string('jenis_ba');
             $table->integer('id_prodi');
             $table->integer('id_ta');
